@@ -15,5 +15,16 @@ document.addEventListener("DOMContentLoaded", function () {
         Player = Player === "X" ? "O" : "X";
       }
     });
+    // Adds hover effect when a user mouse is over a square
+    square.addEventListener("mouseover", function () {
+        // Add hover effect only if has no mark/letter
+        if (!square.classList.contains("X") && !square.classList.contains("O")) {
+          square.classList.add("hover");
+        }
+    });
+    // Remove hover effect when the mouse leaves the square
+    square.addEventListener("mouseout", function () {
+        square.classList.remove("hover");
+    });
   });
 });
