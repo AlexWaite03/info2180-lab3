@@ -1,2 +1,2 @@
-# info2180-lab3
-lab3- game
+# INFO2180 Lab 3
+This is Lab 3 for <Alexander Waite>
