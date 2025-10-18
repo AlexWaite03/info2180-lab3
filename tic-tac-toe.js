@@ -28,7 +28,28 @@ document.addEventListener("DOMContentLoaded", function () {
     square.addEventListener("mouseout", function () {
         square.classList.remove("hover");
     });
-  });
+    });
+
+    //game reset
+    const reset = document.querySelector(".btn");
+
+    // Restarts the game when clicked
+    reset.addEventListener("click", function () {
+      // Clear all squares
+      squares.forEach(function (square) {
+        // Remove X and O from each square
+        square.textContent = "";
+        // Remove classes from each square
+        square.classList.remove("X", "O", "hover");
+      });
+      // Reset status message
+      const status = document.getElementById("status");
+      // Set status to indicate it's X's turn
+      status.textContent = `Player ${currentPlayer}'s turn`;
+;
+      // Remove winning message styling
+      status.classList.remove("you-won");
+    });
 
   function winner (){
     // winning combos
@@ -64,5 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
     }
+
   }
 });
