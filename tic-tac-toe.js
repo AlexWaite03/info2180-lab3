@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Reset status message
       const status = document.getElementById("status");
       // Set status to indicate it's X's turn
-      status.textContent = `Player ${currentPlayer}'s turn`;
+      status.textContent = `Player ${Player}'s turn`;
 ;
       // Remove winning message styling
       status.classList.remove("you-won");
